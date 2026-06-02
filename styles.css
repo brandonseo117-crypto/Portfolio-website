@@ -4,16 +4,18 @@ h1 {
     text-align: center;
     margin-top: 0;
     font-size: clamp(3rem, 5vw, 100px);
-    padding: 10px;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    position: absolute;
+    top: 150px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
 }
 
-#logo {
+#team-logo {
     max-width: 80%;
-    height: auto;
+    position: absolute;
+    top: 350px;
     filter: drop-shadow(20px 0px 20px rgba(0, 0, 0, 0.9));
 }
 
@@ -44,7 +46,7 @@ h1 {
     color: #ff1f2e;
 }
 
-#elements {
+#nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -59,7 +61,7 @@ h1 {
     text-decoration: none;
 }
 
-.brand {
+.site-brand {
     font-family: 'Russo One', sans-serif;
     font-size: 24px;
     color: white;
@@ -68,7 +70,7 @@ h1 {
     white-space: nowrap;
 }
 
-.brand:hover {
+.site-brand:hover {
     color: #ff1f2e;
     transition: color 0.2s ease;
 }
@@ -111,7 +113,7 @@ body {
     min-height: 100vh;
 }
 
-.who {
+.about-section {
     display: grid;
     place-items: center;
     padding: 60px 20px;
@@ -119,21 +121,21 @@ body {
     text-align: center;
 }
 
-.who h2 {
+.about-section h2 {
     font-family: 'Russo One', sans-serif;
     font-size: 40px;
     color: #C1121F;
     margin-bottom: 20px;
 }
 
-.who-body {
+.about-description {
     font-size: 18px;
     max-width: 700px;
     line-height: 1.7;
     color: #ccc;
 }
 
-.wrapper {
+.info-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 60px 20px;
@@ -144,7 +146,7 @@ body {
     border-bottom: 2px solid #003F88;
 }
 
-.wrapper h2 {
+.info-section h2 {
     font-family: 'Russo One', sans-serif;
     font-size: 40px;
     color: #C1121F;
@@ -152,7 +154,7 @@ body {
     border-right: 3px solid #003F88;
 }
 
-.wrapper p {
+.info-section p {
     font-size: 18px;
     padding: 20px;
     color: #ccc;
@@ -183,7 +185,7 @@ tr:hover {
     background-color: #2a2a2a;
 }
 
-#Our-awards {
+#awards-title {
     font-family: 'Russo One', sans-serif;
     font-size: 36px;
     text-align: center;

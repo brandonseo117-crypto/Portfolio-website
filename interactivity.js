@@ -1,26 +1,26 @@
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel-button.next');
-const prevButton = document.querySelector('.carousel-button.prev');
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselSlides = Array.from(carouselTrack.children);
+const nextCarouselButton = document.querySelector('.carousel-button.next');
+const previousCarouselButton = document.querySelector('.carousel-button.prev');
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
+const updateCarouselPosition = (carouselTrack, currentCarouselSlide, targetCarouselSlide) => {
+    carouselTrack.style.transform = 'translateX(-' + targetCarouselSlide.style.left + ')';
+    currentCarouselSlide.classList.remove('current-slide');
+    targetCarouselSlide.classList.add('current-slide');
 };
 
-slides.forEach((slide, index) => {
-    slide.style.left = `${index * 100}%`;
+carouselSlides.forEach((carouselSlide, index) => {
+    carouselSlide.style.left = `${index * 100}%`;
 });
 
-nextButton.addEventListener('click', () => {
-    const currentSlide = track.querySelector('.current-slide');
-    const nextSlide = currentSlide.nextElementSibling || slides[0];
-    moveToSlide(track, currentSlide, nextSlide);
+nextCarouselButton.addEventListener('click', () => {
+    const currentCarouselSlide = carouselTrack.querySelector('.current-slide');
+    const nextCarouselSlide = currentCarouselSlide.nextElementSibling || carouselSlides[0];
+    updateCarouselPosition(carouselTrack, currentCarouselSlide, nextCarouselSlide);
 });
 
-prevButton.addEventListener('click', () => {
-    const currentSlide = track.querySelector('.current-slide');
-    const prevSlide = currentSlide.previousElementSibling || slides[slides.length - 1];
-    moveToSlide(track, currentSlide, prevSlide);
+previousCarouselButton.addEventListener('click', () => {
+    const currentCarouselSlide = carouselTrack.querySelector('.current-slide');
+    const previousCarouselSlide = currentCarouselSlide.previousElementSibling || carouselSlides[carouselSlides.length - 1];
+    updateCarouselPosition(carouselTrack, currentCarouselSlide, previousCarouselSlide);
 });
